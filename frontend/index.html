@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HomePanel</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<div class="shell">
+<aside class="sidebar glass">
+<div class="brand"><div class="brand-mark">H</div><div><b>HomePanel</b><small>HOME SERVER</small></div></div>
+<div class="side-label">WORKSPACE</div><a class="nav active" href="/">⌂ <span>Genel Bakış</span></a>
+<div class="side-label">SİSTEM</div><div class="nav passive">◫ <span>Sunucu Durumu</span></div><div class="nav passive">⇧ <span>Dosya Aktarımı</span></div>
+<div class="sidebar-bottom"><div class="online-dot"></div><span>Panel aktif</span><form method="post" action="/logout"><button class="logout" type="submit">Çıkış ↗</button></form></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><p class="eyebrow">YOUR PRIVATE CLOUD</p><h1>Genel Bakış</h1><p class="muted">Sunucunun anlık durumuna hoş geldin.</p></div><div class="top-right"><span class="live-pill"><i></i> LIVE</span><div class="avatar">H</div></div></header>
+<section class="welcome glass"><div><p class="eyebrow">HOME SERVER</p><h2>Her şey yolunda mı?</h2><p class="muted">Sistem kaynaklarını ve dosya aktarımını buradan yönet.</p></div><div class="welcome-orb">⌘</div></section>
+<section class="section-head"><div><h2>Sistem kaynakları</h2><p class="muted">Gerçek zamanlı donanım ölçümleri</p></div><span class="updated" id="updated">Veriler yükleniyor…</span></section>
+<section class="metrics">
+<article class="metric glass"><div class="metric-head"><span>İŞLEMCİ</span><span class="metric-icon">⌁</span></div><strong id="cpu">—%</strong><div class="bar"><i id="cpu-bar"></i></div><small id="cores">CPU kullanımı</small></article>
+<article class="metric glass"><div class="metric-head"><span>BELLEK</span><span class="metric-icon">▤</span></div><strong id="ram">—%</strong><div class="bar"><i id="ram-bar"></i></div><small id="ram-detail">RAM kullanımı</small></article>
+<article class="metric glass"><div class="metric-head"><span>DEPOLAMA</span><span class="metric-icon">▱</span></div><strong id="disk">—%</strong><div class="bar"><i id="disk-bar"></i></div><small id="disk-detail">Kök disk</small></article>
+<article class="metric glass"><div class="metric-head"><span>NVIDIA GPU</span><span class="metric-icon">◇</span></div><strong id="gpu">—</strong><div class="bar"><i id="gpu-bar"></i></div><small id="gpu-detail">GPU durumu kontrol ediliyor</small></article>
+</section>
+<section class="section-head"><div><h2>Hızlı işlemler</h2><p class="muted">Cihazların arasında dosya gönder.</p></div></section>
+<section class="transfer glass"><div class="transfer-copy"><div class="transfer-icon">⇧</div><div><h3>QR ile dosya aktarımı</h3><p class="muted">Telefon veya tabletinle QR kodu tara, dosyanı doğrudan sunucuya yükle. Bağlantı 10 dakika geçerlidir ve tek kullanımlıktır.</p><button id="create-transfer" class="primary" type="button">QR kod oluştur <span>↗</span></button><p id="transfer-status" class="tiny"></p></div></div><div id="qr-area" class="qr-area"><div class="qr-placeholder">▦<small>QR kod burada görünecek</small></div></div></section>
+<footer>HomePanel <span>•</span> Self-hosted with care</footer>
+</main></div><script src="/static/app.js"></script></body></html>

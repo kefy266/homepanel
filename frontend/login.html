@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HomePanel · Giriş</title><link rel="stylesheet" href="/static/style.css"></head>
+<body class="login-body"><main class="login-card glass">
+<div class="brand-mark">H</div><p class="eyebrow">PERSONAL SERVER</p><h1>HomePanel</h1><p class="muted">Sunucuna güvenli giriş yap.</p>
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<form method="post"><label for="password">Yönetici şifresi</label><input id="password" name="password" type="password" required autofocus autocomplete="current-password"><button class="primary" type="submit">Giriş yap <span>↗</span></button></form>
+<p class="tiny">Yerel ağındaki kişisel kontrol panelin.</p></main></body></html>

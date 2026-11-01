@@ -1,0 +1,6 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HomePanel · Dosya aktarımı</title><link rel="stylesheet" href="/static/style.css"></head>
+<body class="login-body"><main class="login-card glass"><div class="brand-mark">H</div><p class="eyebrow">HOME SERVER</p><h1>Dosya aktarımı</h1>
+{% if invalid %}<div class="error">Bu QR bağlantısı geçersiz, süresi dolmuş veya daha önce kullanılmış.</div>
+{% elif success %}<div class="success">✓ <b>{{ filename }}</b> sunucuya yüklendi.</div><p class="muted">Bu pencereyi kapatabilirsin.</p>
+{% else %}<p class="muted">Dosyanı HomePanel sunucusuna güvenli bağlantı üzerinden gönder.</p><form method="post" enctype="multipart/form-data"><label for="file">Dosya seç (en fazla 100 MB)</label><input id="file" name="file" type="file" required><button class="primary" type="submit">Sunucuya yükle ↗</button></form>{% endif %}
+<p class="tiny">HomePanel · Tek kullanımlık aktarım bağlantısı</p></main></body></html>
